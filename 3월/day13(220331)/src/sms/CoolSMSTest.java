@@ -7,8 +7,8 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 public class CoolSMSTest {
 	public static void main(String[] args) {
-		String api_key = "api 키";
-	    String api_secret = "api secret 키";
+		String api_key = "API 키";
+	    String api_secret = "API Secret 키";
 	    Message coolsms = new Message(api_key, api_secret);
 
 	    // 4 params(to, from, type, text) are mandatory. must be filled
