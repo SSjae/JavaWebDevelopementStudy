@@ -38,7 +38,7 @@ public class NumTest {
 				System.out.println("0으로는 나눌 수 없습니다.");
 			}
 			catch (InputMismatchException ime) {
-				System.out.println("숫자만 입력하세요 제발");
+				System.out.println("숫자만 입력하세요!!! 제발!!!");
 			}
 			catch(Exception e) {
 				System.out.println("알 수 없는 오류 발생 / 개발자에게 알려주세요~");
