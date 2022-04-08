@@ -1,0 +1,67 @@
+▶ 파일 입출력
+		Reader(출력)
+
+			FileReader > BufferedReader > 파일에서 출력
+
+			FileReader		: 경로에 있는 파일 준비시키기(읽기 위해)
+			* 파일이 없으면 예외 발생(FNFE)
+
+			BufferedReader	: 버퍼를 이용해서 파일 읽기
+
+			.readLine()		: \n을 기준으로 한 줄씩 읽어오기
+
+▶ MVC 모델
+		소프트웨어 설계시 사용되는 디자인 패턴
+		만드는 방법이 아닌 "잘" 만드는 방법에 대해 배우는 것
+
+		M : Model		(데이터와 대응)
+		V : View		(보여지는 화면)
+		C : Controller	(흐름 제어) --> 데이터베이스에서 필요한 데이터를 주고 받고
+
+▶ MVC Model1
+		View, Controller 함께 공존하는 형태
+
+▶ MVC Model2
+		View, Controller가 완벽하게 분리된 형태
+
+▶ DTO(Data Transfer Object / VO(Value Object)
+		양쪽으로 전송되어 오고가는 데이터들을 담은 객체
+		여러 데이터들을 포장해서 만든 데이터 포장용 객체
+		데이터 전송 객체
+
+▶ DAO(Data Access Object)
+		저장되어 있는 데이터에 접근하기 위한 객체
+		데이터들을 관리(추가,수정,삭제,읽기 CRUD)하는
+		메소드들이 정의되어 있다.
+		데이터 접근 객체1
+		데이터베이스에 접근하는 객체들
+
+		CRUD : CREATE, READ, UPDATE, DELETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
