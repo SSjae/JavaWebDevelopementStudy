@@ -1,0 +1,42 @@
+테이블
+		표
+		<table>
+			<tr>
+				<td>내용</td> 혹은 <th>내용</th>
+				<td>내용</td>
+				...
+			</tr>
+			...
+		</table>
+
+		tr : 행(table row)
+		th : 컬럼명, 컬럼제목(table header)
+		td : 열, 내용(table data)
+
+병합
+		열 병합(좌우로 합치는 거)
+				colspan = "합칠 열 개수"
+				오른쪽에 있는 셀들을 개수만큼 잡아먹으며 병합
+				<td colspan = "2"></td>
+
+		행 병합(위아래로 합치는 거)
+				rowspan = "합칠 행 개수"
+				아래쪽에 있는 셀들을 개수만큼 잡아먹으며 병합
+				<td rowspan = "2"></td>
+
+캡션(caption)
+		접근성 때문에 쓰는 거지
+		위에 붙고 아래에 붙고 하는 거는 css로 하면 된다.
+		<caption>제목 혹은 짧은 설명글</caption>
+
+		<table> 태그의 안에 작성해야 하며 딱 하나만 작성 가능하다.
+		<caption> 태그를 이용하면 테이블 상단에 짧은 글을 붙일 수 있다.
+
+thead, tbody, tfoot
+		행과 열을 묶어서 한번에 스타일을 지정할 수 있다.
+		하나의 테이블에 각각 하나씩만 사용 가능하다.
+		시각 장애인을 위한 접근성 보장(스크린 리더 기능)
+
+
+css 색 코드표 홈페이지
+		https://materializecss.com/color.html
