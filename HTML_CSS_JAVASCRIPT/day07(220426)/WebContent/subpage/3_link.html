@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_link</title>
+<style>
+	a {
+		/* 밑줄 없애기 */
+		text-decoration: none;
+	}
+	/* 링크가 연결되었을 때 */
+	a:link {
+		color : deepskyblue;
+	}
+	/* 한번이라도 해당 페이지에 들렸을 때 */
+	a:visited {
+		color : deepskyblue;
+	}
+	/* 마우스를 링크에 올리고 있을 떄 */
+	a:hover {
+		color : deeppink;
+	}
+	/* 마우스를 링크를 클릭하고 있을 때*/
+	a:active {
+		color : gold;
+	}
+</style>
+</head>
+<body>
+	<!-- target="_blank" : 새창으로 이동 -->
+	<a href="../1_image1.html" target="_blank">생맥주 먹으러 가기~~</a><br>
+	<a href="http://www.naver.com">네이버로 놀러가기</a><br>
+	<a href="./2_image2.html"><img src="../sossage.png"></a>
+</body>
+</html>
