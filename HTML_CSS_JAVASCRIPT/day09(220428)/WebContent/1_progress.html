@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1_progress</title>
+</head>
+<body>
+	<div>
+		<progress max="100" value="20"></progress>
+	</div>
+	<div>
+		<progress max="100" value="60"></progress>
+	</div>
+	<div>
+		<progress max="100" value="0" id="pg"></progress>
+		<input type="button" value="진행" onclick="document.getElementById('pg').value += 10;">
+		<input type="button" value="감소" onclick="document.getElementById('pg').value -= 10;">
+	</div>
+</body>
+</html>
