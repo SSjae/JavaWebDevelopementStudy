@@ -1,0 +1,19 @@
+/* common.css */
+/* CSS 문법 적용 */
+#notice {
+	background: black;
+	color: yellow;
+	text-align: center;
+	font-size: 4em;
+}
+ol {
+	font-size: 1.5em;
+}
+
+.how>#first>a {
+	text-decoration: none;
+	color: red;
+}
+.how>#first>a:visited {
+	color: red;
+}

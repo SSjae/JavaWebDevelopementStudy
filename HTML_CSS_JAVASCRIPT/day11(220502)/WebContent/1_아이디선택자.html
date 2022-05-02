@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1_아이디선택자</title>
+<style>
+	#container {
+		background-color: #e1bee7;
+		width: 400px;
+		height: 300px;
+		border: 3px dotted gold;
+	}
+	/* 띄어쓰기는 자식 자손 다 포함하는 것 */
+/* 	#container p {
+		color: red;
+	} */
+	/* 선택자1>선택자2 : 선택자1 바로 안에 있는 선택자2(자손이 아니라 자식만 선택) */
+	#container>p {
+		color: red;
+	}
+	#container>ul>li>p {
+		color: blue;
+	}
+</style>
+</head>
+<body>
+	<h1>CSS 하이</h1>
+	<div id="container">
+		<p>여기는 컨테이너 내부입니다.</p>
+		<ul>
+			<li>
+				<p>여기는 li태그 영역입니다.</p>
+			</li>
+		</ul>
+		<p>여기는 컨테이너 내부입니다.</p>
+	</div>
+</body>
+</html>
