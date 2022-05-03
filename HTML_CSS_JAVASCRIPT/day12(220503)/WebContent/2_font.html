@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2_font</title>
+<style>
+/* 	html { font-size: 24px; } */
+	.w_400 { font-weight: 400; }
+	.w_700 { font-weight: 700; }
+	.w_900 { font-weight: 900; }
+	.w_bold { font-weight: bold; }
+	.a { font-size: 200%; }
+	.b { font-size: 2em; }
+	.c { font-size: 2rem; }
+	.d { font-size: 16px; }
+</style>
+</head>
+<body>
+	<p class="w_400">안녕</p>
+	<p class="w_700">안녕</p>
+	<p class="w_900">안녕</p>
+	<p class="w_bold">안녕</p>
+	<hr>
+	<p>기본크기 문자열입니다.</p>
+	<p class="a">상대크기 %로 크기를 조절한 문자열입니다.</p>
+	<div style="font-size: 1.5em;"> <!-- div의 font 크기 : 24px -->
+		<p class="b">상대크기 em로 크기를 조절한 문자열입니다.</p> <!-- 36px 부모의 문자열 크기를 기준으로  -->
+		<p class="c">상대크기 rem로 크기를 조절한 문자열입니다.</p> <!-- html 폰트 크기를 기준으로 -->
+		<p class="d">절대크기 px로 크기를 조절한 문자열입니다.</p>
+	</div>
+</body>
+</html>

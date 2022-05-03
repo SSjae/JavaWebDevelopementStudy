@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1_우선순위</title>
+<style>
+	div {
+		width: 300px;
+		height: 20px;
+		background-color: yellow;		/* 1점 */
+		/* 안쪽여백(테두리 ~ 컨텐츠) */
+		padding: 30px;
+		/* 바깥여백(테두리 ~ 다른요소 혹은 브라우저창) */
+		margin: 30px;
+	}
+	#important {
+		background-color: deeppink !important;		/* 100점 */
+	}
+	#id-style {
+		background-color: green;		/* 100점 */
+	}
+	.class-style {
+		background-color: deepskyblue;	/* 10점  */
+	}
+	.class-style2 {
+		background-color: gold;			/* 같은 점수면 나중것이 적용 */
+	}
+	ul>li.li-class {
+		background-color: salmon; 		/* 태그 2개, 클래스 1개 --> 12점 */
+	}
+	ul>li {
+		background-color: blue;			/* 태그 2개 --> 2점 */
+	}
+</style>
+</head>
+<body>
+	<div style="background-color: red;" class="class-style class-style2" id="important">div 1번(important - 최우선)</div>
+	<!-- id는 고유한 하나의 요소에게만 줄때 사용
+		class는 여러개의 요소에게 같은 스타일을 줄때 사용 -->
+	<div style="background-color: red;" class="class-style">div 2번(인라인스타일 - 1000점)</div>
+	<div id="id-style">div 3번(id선택자 - 100점)</div>
+	<div class="class-style">div 4번(class선택자 - 10점)</div>
+	<div class="class-style class-style2">div 5번(class선택자 - 10점)</div>
+	<div>div 6번(태그선택자 - 1점)</div>
+	<ul>
+		<li class="li-class">li 내용</li>
+	</ul>
+</body>
+</html>
