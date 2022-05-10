@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_고정,절대위치</title>
+<style>
+	#wrap {
+		width: 500px;
+		height: 500px;
+		border: 3px solid red;
+		background: #f3f2f1;
+		position: relative;
+	}
+	.box {
+		background: deepskyblue;
+		color: white;
+		width: 50px;
+		height: 50px;
+		border: 2px solid green; 
+		/* 절대적인 위치로 우리가 지정해줘야 하기 떄문에 초기 자리로 돌아온다. */
+		/* absolute는 부모가 위치 지정이 된다면 그 부모를 기준으로 움직이게 된다. */
+		position: absolute;
+	}
+	
+	/* 왼쪽 위 모서리를 기준으로 위치를 지정해주는 것이다. */
+	#ab1 {
+		top: 0;
+		right: 0;
+	}
+	#ab2 {
+		bottom:0;
+		left: 20px;
+	}
+	#ab3 {
+		bottom:10px;
+		right:0;
+	}
+	#ab4 {
+	/* 가운데 위치 */
+		top: 233px;
+		left: 223px;
+	}
+	#ab5 {
+		/* id가 우선순위가 높기 떄문에 덮여씌여서 이 아이는 고정된다. */
+		position: fixed;
+		right: 30px;
+		bottom: 100px;
+		/* 차례대로 왼쪽 위에서 시계방향     x축(가로) / y축(세로) */
+		border-radius: 15px 7px 7px 7px / 15px 15px 25px 25px;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box" id="ab1">1번</div>
+		<div class="box" id="ab2">2번</div>
+		<div class="box" id="ab3">3번</div>
+		<div class="box" id="ab4">4번</div>
+		<div class="box" id="ab5">5번</div>
+	</div>
+</body>
+</html>

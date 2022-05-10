@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2_상대위치</title>
+<style>
+	div {
+		width: 200px;
+		height: 140px;
+	}
+	.p1 {
+		background: deeppink;
+		padding: 20px;
+		border: 3px solid deepskyblue;
+	}
+	.p2 {
+		background: deepskyblue;
+		padding: 20px;
+		border: 3px solid deeppink;
+		
+		position: relative;
+		/* 위치에서부터 작성한 px만큼 떨어짐 */
+		left: 100px;
+		top: -70px;
+		/* 
+			position 속성과 함께 쓰이며 요소의 위, 아래를 결정짓는 속성
+			(값이 클수록 위로 올라오고 작을수록 아래로 내려간다.)
+		/*
+		/* 초기값이 0, 상징적으로 그냥 밑으로 있다는 것만 나타내는 거라
+		   숫자의 크기는 의미 크게 없음 z축 */
+		z-index: -100;
+	}
+</style>
+</head>
+<body>
+	<div class="p1">상대위치 지정방식1</div>
+	<div class="p2">상대위치 지정방식2</div>
+</body>
+</html>
