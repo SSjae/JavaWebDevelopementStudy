@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2_for</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let arData = new Array();
+	arData[0] = 10;
+	arData[3] = 20;
+	arData[7] = 30;
+	arData[1] = 40;
+	arData[11] = 50;
+	
+	console.log(arData);
+	
+	for(let i in arData) {
+		console.log(i);			// 인덱스 출력
+		console.log(arData[i]);	// 실제 값 출력
+	}
+	
+	let mycar = { brand:"Ferrari", color:"Red"};
+	for(let key in mycar) {
+		console.log(mycar[key]);	// 실제 필드 값 출력
+	}
+	
+	for(let data of arData) {
+		console.log(data);			// undefined도 출력
+	}
+</script>
+</html>

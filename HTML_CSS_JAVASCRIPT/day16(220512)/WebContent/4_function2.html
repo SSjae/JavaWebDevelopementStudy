@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4_function2</title>
+</head>
+<body>
+
+</body>
+<script>
+	//f();
+	
+	// 선언만이 호이스팅이 된다.
+	// 함수 선언은 밑에서 해도 호이스팅이 되서 상관없지만
+	// 함수 표현식은 먼저 변수에 할당되야 함수를 사용 가능하다.
+	let f = function(){
+		for (let i = 0; i < 10; i++) {
+			console.log(i);
+		}
+	}
+	f();
+	
+	// 콜백함수 : 함수를 매개변수로 넘기고 그 안에서 함수를 호출
+	function f2(callback) {
+		callback();
+	}
+	f2(f);
+	f2(function(){
+		alert("콜백함수 호출!");
+	})
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_function1</title>
+</head>
+<body>
+
+</body>
+<script>
+	f();
+
+	function f() {
+		for (let i = 0; i < 10; i++) {
+			console.log("i : " + i);
+		}
+	}
+	
+	// 선언과 동시에 호출
+	(function f2() {
+		alert("우와 신기하다!");
+	})();
+</script>
+</html>

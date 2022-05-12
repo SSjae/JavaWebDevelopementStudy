@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5_function_task</title>
+<style>
+	#container {
+		width : 800px;
+		margin: 0 auto;
+	}
+	table {
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	thead {
+		background-color: yellow;
+	}
+	fieldset {
+		width: 500px;
+		height: 50px;
+		text-align: center;
+		margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+	<div id="container">
+		<table border="1">
+			<caption>요금표</caption>
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>요금</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="kid">
+					<td id="kidtd">아동</td>
+					<td>무료</td>
+				</tr>
+				<tr id="teen">
+					<td id="teentd">청소년</td>
+					<td>2000원</td>
+				</tr>
+				<tr id="adult">
+					<td id="adulttd">성인</td>
+					<td>5000원</td>
+				</tr>
+			</tbody>
+		</table>
+		<fieldset>
+			<legend>구분</legend>
+			<input type="text" id="put">
+			<input type="button" onclick="f();" value="확인">
+		</fieldset>
+	</div>
+</body>
+<script>
+	// document.getElementById("아이디명") : id 속성값이 넘겨준 문자열인 태그객체 가져오기
+	// 태그객체.innerHTML = "바꿀문자열" --> 내용 바꾸기
+	// 태그객체.style.background = "값" --> 배경색 바꾸기
+	// 버튼에 onclick="함수();" 를 넣어주면 클릭하면 함수가 실행됨
+	// 인풋태그객체.value : 인풋태그에 사용자가 작성한 문자열값
+	
+	function f() {
+		const inputTag = document.getElementById("put");
+		let value = inputTag.value;
+		let arrData = ["아동","청소년","성인"];
+		let arrTr = ["kid","teen","adult"];
+		let arrTd = ["kidtd","teentd","adulttd"];
+
+		if(value != arrData[0] && value != arrData[1] && value != arrData[2]) {
+			alert("다시 한번 시도해주세요")
+		}
+		
+		for (let i = 0; i < arrData.length; i++) {
+			if(value == arrData[i]) {
+				let tr = document.getElementById(arrTr[i]);
+				let td = document.getElementById(arrTd[i]);
+				tr.style.background = "red";
+				td.innerHTML = "★" + td.innerHTML;
+			}
+			else {
+				let tr = document.getElementById(arrTr[i]);
+				let td = document.getElementById(arrTd[i]);
+				tr.style.background = "white";
+				td.innerHTML = arrData[i];
+			}
+		}
+	}
+</script>
+</html>
