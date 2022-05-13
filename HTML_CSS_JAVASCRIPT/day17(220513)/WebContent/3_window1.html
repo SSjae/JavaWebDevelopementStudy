@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_window1</title>
+</head>
+<script>
+	// 문서 로딩이 다 끝나고 나서 실행
+	// onload를 안하면 바디가 되기 전에 추출하기 때문에 아무것도 추출이 안된다.
+	window.onload = function() {
+		let pTag = document.getElementById("text");
+		console.log(pTag);
+		
+		// 새창
+		// window.open("https://www.naver.com", "_blank", "width=600, height=300",true);
+		// 현재창
+		window.open("https://www.naver.com", "_self", "width=600, height=300");
+	}
+</script>
+<body>
+	<h2>거북이 -빙고(아싸)</h2>
+	<p id="text">
+		산 속에도 저 바다 속에도 <br>
+		이렇게 행복할 순 <br>
+		없을거야 <br>
+		랄랄랄라 <br>
+		구름타고 세상을 날아도 <br>
+		지금처럼 좋을 수는 없을거야 <br>
+		울랄랄라 <br>
+		모든게 마음 먹기 달렸어 <br>
+		어떤게 행복한 삶인가요 <br>
+		사는게 힘이 들다 하지만 <br>
+		쉽게만 살아가면 <br>
+		재미없어 빙고 <br>
+	</p>
+</body>
+</html>
