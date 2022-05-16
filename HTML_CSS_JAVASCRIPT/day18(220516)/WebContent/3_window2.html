@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_window2</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// window.setTimeout, window.setInterval 자체가 객체이기 때문에 변수에 넣을 수 있음
+
+	// window.setTimeout(함수,밀리초) : 해당 밀리초 이후에 넘겨주는 함수 호출
+	let st = window.setTimeout(function() {
+		alert("진행됨")
+	},5000);
+	
+	// st 객체를 받았기 때문에 st 객체 취소
+	clearTimeout(st);
+	
+	// 1초마다 함수 실행
+	let it = window.setInterval(function() {
+		console.log("이 바보야 진짜 아니야")
+	},1000);
+	
+	// it 객체를 받았기 때문에 it 객체 취소
+	clearInterval(it);
+</script>
+</html>

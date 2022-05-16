@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7_DOM2</title>
+<style>
+	.hdd {
+		display:none;
+	}
+</style>
+</head>
+<body>
+	<h2 id="h2-text">내가 없어져볼께</h2>
+	<p id="text">내가 없어져볼께</p>
+	<input type="button" onclick="doing();" value="없애기">
+	<input type="button" onclick="doing2();" value="살리기">
+</body>
+<script>
+	// F12에서 보라색으로 보이는거는 자바스크립트로 한것이다.
+	
+	// 실제로 style을 주는 것보다는 css로 스타일을 지정해놓고 클래스를 주고 안 주고를 한다.
+	function doing() {
+		// 태그객체.classList : 태그객체의 클래스 값들을 담고있는 배열(같은 거)
+		document.getElementById("text").classList.add("hdd");
+		document.getElementById("h2-text").classList.add("hdd");
+	}
+	function doing2() {
+		document.getElementById("text").classList.remove("hdd");
+		document.getElementById("h2-text").classList.remove("hdd");
+	}
+</script>
+</html>

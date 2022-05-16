@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5_location2</title>
+</head>
+<body>
+	<input type="button" value="열기" onclick="openPage()">
+	<p id="text"></p>
+</body>
+<script>
+	function openPage() {
+		 location.assign("4_location1.html");
+		//location.replace("4_location1.html"); // 이 url이 첫 페이지로 됨
+	}
+	// history.length : 방문페이지 수 반환(중복 방문 페이지는 안 셈)
+	document.getElementById("text").innerHTML = history.length;
+</script>
+</html>

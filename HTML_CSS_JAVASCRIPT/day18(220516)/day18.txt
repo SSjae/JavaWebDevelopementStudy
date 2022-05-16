@@ -1,0 +1,110 @@
+form 태그 접근
+		<form id="joinForm" name="joinForm">
+				<input id="in1" type="text" name="in1">
+		</form>
+
+		// name으로 객체를 찾을 때(간단히) - id로도 역시나 찾을 수 있음(getElementById)
+		let frm = document.joinForm
+		let inputTag = frm.in1;
+		inputTag.value -> 입력값
+		
+		유효성 검사 목적으로 접근
+
+location 객체
+		현재 브라우저에 표시된 HTML 문서의 주소를 얻거나, 브라우저의
+		새 문서를 불러올 때 사용할 수 있다. location 객체의 프로퍼티와
+		함수를 이용하면 현재 문서의 URL 주소를 다양하게 해석하여 처리할 수 있다.
+
+		location.href
+				현재 페이지의 URL 정보가 담겨있는 프로퍼티
+				대입을 통해 새로운 문자열을 넣게 되면 해당 페이지로 이동이 일어난다.
+				사용자의 주소창에 직접 치는 거랑 같다.
+
+		location.reload()
+				새로고침
+
+		location.assign("URL 주소")
+				현재 URL을 지정한 URL로 바꿔서 이동
+
+					 assign
+				A --> B -->	C
+					  <-- 뒤로가기 하면 B로
+
+				href랑 다를게 없다.
+
+		location.replace("URL 주소")
+				현재 URL을 지정한 URL로 대체해서 바꾸고 이동 불가
+
+					replace
+				A --> B --> C
+				<---------- B를 C로 대체하기 때문에 뒤로가기 하면 A로 감
+
+
+history 객체
+		브라우저에 히스토리 정보를 문서 상태 목록으로 저장하는 객체
+
+		history.go(n)		: n만큼 페이지 이동, 양수면 앞으로 음수면 뒤로 이동, 0은 새로고침
+		history.back()		: 뒤로 가기
+		history.forward()	: 앞으로 가기
+
+DOM
+		문서 객체 모델(DOM : Document Object Model)
+		XML이나 HTML 문서에 접근하기 위한 인터페이스, 문서 내의 모든 요소를 정의하고
+		각각의 요소에 접근하는 방법을 제공한다.
+		자바 스크립트에서 HTML을 접근하기 위해서는 DOM을 사용해야 한다.
+
+document 객체
+		웹 페이지 그 자체를 의미한다. 웹 페이지에 존재하는 HTML 요소에 접근하고자 할 때에는
+		반드시 document 객체부터 시작한다.
+						┌head────title...
+		document────────html──┤	
+			       		└body──┬─p
+				     			 ├─h2
+				      		 └─...
+
+document 메소드 
+		- HTML 요소 선택용
+		getElementById("아이디");
+				해당 아이디를 가진 요소를 선택해서 객체로 가져오는 함수
+
+		getElementsByTagName("태그명"); // 한개만 있더라도 한개가 담긴 배열로 가져옴
+				해당 태그인 요소들을 선택해서 배열로 가져오는 함수
+
+		getElementsByClassName("클래스명"); // 한개만 있더라도 한개가 담긴 배열로 가져옴
+				해당 클래스를 가진 요소들을 선택해서 배열로 가져오는 함수
+
+		querySelectorAll("CSS선택자") // CSS선택자가 포함된 태그를 배열로 가져옴
+				선택자에 해당하는 요소들을 배열로 가져오는 함수
+				getElementsByClassName("test"); === querySelectorAll(".test") 
+
+		- HTML 요소 내용 변경
+				innerHTML 프로퍼티를 이용해서 간단하게 요소의 내용을 변경할 수 있따.
+				태그객체.innerHTML = 새로운내용;
+
+		- HTML 요소 스타일 변경
+				태그객체.style.속성명 = 속성값;
+				속성명은 CSS와 다른 속성명도 있다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

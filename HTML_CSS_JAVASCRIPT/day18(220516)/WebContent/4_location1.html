@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4_location1</title>
+</head>
+<body>
+	<form name="myForm">
+		<!-- label : 무슨 의미는 없고 하나로 묶어주는 거 네이버 글자만 눌러도 됨 -->
+		<p>
+			<label>
+				네이버<input type="radio" value="naver" name="site">
+			</label>
+		</p>
+		<p>
+			<label>
+				다음<input type="radio" value="daum" name="site">
+			</label>
+		</p>
+		<p>
+			<label>
+				구글<input type="radio" value="google" name="site">
+			</label>
+		</p>
+		<p>
+			<label>
+				야후<input type="radio" value="yahoo" name="site">
+			</label>
+		</p>
+		<p>
+			<input type="button" onclick="sendit()" value="이동">
+		</p>
+	</form>
+</body>
+<script>
+	// 1. 사이트 선택(라디오버튼 선택)
+	// 2. 이동버튼 클릭
+	// 3. sendit() 호출
+	
+	function sendit() {
+		// 4. 사용자가 선택한 것의 value 확인
+		let form = document.myForm;
+		let inputTag = form.site; // name은 여러개지만 체크된 값만 들어옴
+		
+		switch(inputTag.value) {
+		case "naver" :
+			// 이 문자열을 주소창에 쓴거랑 같다.
+			location.href = "https://www.naver.com";
+			break;
+		case "daum" :
+			location.href = "https://www.daum.net";
+			break;
+		case "google" :
+			location.href = "https://www.google.com";
+			break;
+		case "yahoo" :
+			location.href = "https://www.yahoo.com";
+			break;
+		}
+	}
+</script>
+</html>

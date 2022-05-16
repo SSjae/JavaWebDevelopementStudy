@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table{
+		margin:0 auto;
+		width:500px;
+		margin-bottom:20px;
+		border-collapse: collapse;
+		text-align:center;
+	}
+	th,td{
+		box-sizing:border-box;
+		padding:5px 0;
+		border:2px inset #ef9a9a;
+		font-weight: 600;
+		width:250px;
+	}
+	caption{
+		color:white;
+		font-weight:bold;
+		text-shadow:3px 3px 2px orange;
+		font-size:2em;
+		margin-bottom:20px;
+	}
+	fieldset {
+		width:30%;
+		margin:0 auto;
+		text-align:center;
+		border-radius:5px;
+		border-color:#ce93d8;
+	}
+	input{
+		border-radius:3px;
+		padding:5px;
+	}
+	input[type='text']{
+		border-color:#3949ab;
+	}
+	
+	button{
+		-webkit-appearance: none;
+		appearance:none;
+		padding:5px;
+		border:2px solid #c5cae9;
+		border-radius:3px;
+		background-color:#9fa8da;
+		color:#fff;
+	}
+</style>
+</head>
+<body>
+	<table>
+		<caption>요금표</caption>
+		<tr>
+			<th>구분</th>
+			<th>요금</th>
+		</tr>
+		<tr id="kid">
+			<td id="kid-text">아동</td>
+			<td>무료</td>
+		</tr>
+		<tr id="teen">
+			<td id="teen-text">청소년</td>
+			<td>2000원</td>
+		</tr>
+		<tr id="adult">
+			<td id="adult-text">성인</td>
+			<td>5000원</td>
+		</tr>
+	</table>
+	<fieldset>
+		<legend>구분</legend>
+		<input type="text" id="input">
+		<button onclick="confirm()">확인</button>
+	</fieldset>
+</body>
+<script>
+	let inputTag = document.getElementById("input");
+	let arId = ["kid","teen","adult"];
+	let arAge = ["아동","청소년","성인"]
+
+	
+	function confirm(){
+		let age = inputTag.value;
+		for(let i=0;i<3;i++){
+			let tdTag = document.getElementById(arId[i]+"-text");
+			if(age === arAge[i]){
+				if(tdTag.innerHTML == "★"+age){
+					//이미 색칠된 경우 아무것도 안하기
+					continue;
+				}
+				document.getElementById(arId[i]).style.background = '#ef9a9a';
+				tdTag.innerHTML = '★'+tdTag.innerHTML;
+			}
+			else{
+				document.getElementById(arId[i]).style.background = "#fff";
+				tdTag.innerHTML = tdTag.innerHTML.replace("★","");
+			}
+		}
+	}
+
+</script>
+</html>

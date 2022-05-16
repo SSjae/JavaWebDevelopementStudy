@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4_function_task</title>
+<link href="./function_task.css" rel="stylesheet">
+</head>
+<body>
+	<fieldset>
+		<legend>숫자를 한글로 변경</legend>
+		<textarea rows="3" cols="40" id="output">결과 표시 부분</textarea>
+		<input type="text" placeholder="숫자를 입력해 주세요." id="input"><br>
+		<button onclick="valueChange();">변경</button>
+	</fieldset>
+</body>
+<script>
+	//document.getElementById("아이디")	: 해당 아이디를 가진 태그 객체로 가져오기
+	//인풋태그객체.value					: 태그에 사용자가 입력한 값
+	//문자열.charAt(idx)					: idx번째 글자 
+	//문자열[idx]							: idx번째 글자
+	//문자열.indexOf(값)					: 해당 값이 있는 idx번호
+	//문자열.replace("기존값","새로운값")	: "기존값" 대신 "새로운값"으로 변경된 문자열 리턴
+	let inputTag = document.getElementById("input");
+	let textareaTag = document.getElementById("output");
+	
+	let changeToHangle = function(num){
+		let hangle="공일이삼사오육칠팔구";
+		let result = "";
+		let data = num + "";
+		
+		for (let i = 0; i < data.length; i++) {
+			result += hangle[data[i]]
+		}
+		result = result.replace("undefined","점");
+		return result;
+	}
+	let valueChange = function(){
+		let num = inputTag.value;
+		if(isNaN(num)){
+			textareaTag.innerHTML = "숫자만 입력해주세요."
+		}
+		else{
+			textareaTag.innerHTML = changeToHangle(num);			
+		}
+	}
+	
+</script>
+</html>
