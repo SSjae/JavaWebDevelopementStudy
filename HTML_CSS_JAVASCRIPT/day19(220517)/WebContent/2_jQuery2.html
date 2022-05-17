@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2_jQuery2</title>
+<!-- 다운받지 않더라도 jQuery사용 가능 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<ul class="students">
+		<li>김사과</li>
+		<li>반하나</li>
+		<li>이체리</li>
+		<li id="hate">두리안</li>
+	</ul>
+</body>
+<script>
+	// each 앞에 여러개의 요소인 제이쿼리 객체가 있다면 뒤 매개변수에 오는 익명함수에 맞게
+	// 각 객체 하나하나를 수행한다.
+	$(".students li").each(function() {
+		// $(this) : 앞에 꺼내오는 li 태그 객체(jQuery 객체)
+		// 제이쿼리객체.attr("속성명") : 해당 속성의 값
+		if($(this).attr("id") != "hate") {
+			console.log($(this).text());
+		}
+	});
+	/*
+	function(e,a){
+		
+	}
+	(e,a)=>{
+		
+	}
+	*/
+	$(".students li").each((index,item) =>{
+		// index 	: 몇번째 반복인지(0 ~ )
+		// item		: 앞에서 꺼내오는 li 태그 객체(바닐라 js 객체)
+		console.log(index + "번째의 내용 : " + item.innerHTML);
+	})
+	
+	// $.each(반복자,함수)	: 반복자 안에서 하나씩 요소를 꺼내오며 함수 호출
+	$.each(
+		[10,20,30,40,50],
+		function(index,item) {
+			console.log(index + "번째의 내용 : " + item);
+		}
+	)
+</script>
+</html>
