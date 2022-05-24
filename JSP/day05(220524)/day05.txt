@@ -1,0 +1,26 @@
+DBCP(Database Connection Pool)
+		원칙은 항상 데이터베이스를 열어주면(Connection) 무조건 닫아줘야 한다.(conn.close())
+		사용자가 한명이 아니라 여러명이기 때문에 연결이 엄청 많아지기 때문에 부하가 걸린다.
+		이렇게 되면 계속 connection을 열고 닫고 열고 닫고를 반복해줘야 하기 때문에
+		컴퓨터에서 자원이 낭비된다. 이것을 해결해주는게 DBCP이다.
+
+		사용자의 요청이 있을 때마다 DB 연결을 한다면 코드가 복잡해지며
+		많은 요청이 있을 때 연결속도가 저하될 수 있다. 따라서 이미
+		Connection을 만들어 두고 필요시 저장된 공간에서 가져다 쓰고
+		다시 반납하는 기법이다.
+
+DBCP 라이브러리 다운
+		build path의 라이브러리와 WEB-INF의 lib에다가
+		dbcp jar파일(apach -> lib 파일에서 찾아서) 넣어줘야 함
+
+우편번호 찾기 API
+		https://postcode.map.daum.net/guide
+
+		에서 예제코드보기에서 복사 붙여넣기
+
+JNDI(Java Naming and Directory Interface)
+	디렉터리 서비스에서 제공하는 데이터 및 객체를 발견하고 참고하기 위한
+	자바 API이며 외부에 있는 객체를 가져오기 위한 기술이다.
+
+	사용자 요청 > JNDI에 등록된 DB객체 검색 > 찾은 객체에서 커넥션 획득
+	> DB작업 종료 후 커넥션 반납
