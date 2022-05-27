@@ -1,0 +1,74 @@
+EL문과 JSTL문
+		사용자 정의 태그를 만들 수 있다. <jsp:
+		
+		라이브러리로 자바 구문을 만들어 놓고 필요할 때마다 꺼내 쓰면 되기 때문에
+		유지보수에 편하다. JSP 페이지 내에서 자바코드와 HTML코드(태그형태)가
+		섞여 있으면 가독성이 떨어진다. EL문과 JSTL문을 사용하면 HTML과
+		태그 형태로만 구성된 일관된 소스코드를 볼 수 있다.
+
+EL문
+		Expression Language
+		값을 간결하고 간편하게 출력(표현)할 수 있도록 해주는 언어
+
+		JSP(자바)					EL
+		<%=name%>					${name}
+
+		[연산자]
+				/		div		${10/3}, ${10 div 3}
+				%		mod
+				&&		and
+				||		or
+				!		not
+				>		gt
+				<		lt
+				>=		ge
+				<=		le
+				==		eq
+				!=		ne
+				empty		뒤에 오는 값이 비어있으면 true / 아니라면 false
+						${empty data} : data의 값이 없으면 true
+
+				session.getAttribute("loginUser") == null
+				${empty loginUser}
+
+JSTL문
+		JSP Standard Tag Library
+		연산이나 조건문, 반복문을 편하게 처리할 수 있으며, JSP 페이지 내에서
+		자바 코드를 사용하지 않고 로직을 구현할 수 있는 효과적인 방법을 제공한다.
+
+		JSP(자바)						JSTL
+
+		<%						<c:if test="조건식">
+		if(조건식) {					<p>결과</p>
+		%>						<c:if>
+			<p>결과</p>
+		<%
+		}
+		%>
+
+라이브러리 다운로드
+		https://archive.apache.org/dist/jakarta/taglibs/standard/binaries/
+		> jakarta-taglibs-standard-1.1.2.zip 다운로드 > 사용할 페이지로 이동
+		> 맨 위에 작성
+		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+		[core 태그]
+		<c:set var="key값(변수명)" value="세팅할값" scope="세팅할위치"/>	변수세팅
+		<c:out value="${변수명}"/>								변수출력
+		<c:if test="${조건식}"></c:if>							if문
+		<c:choose></c:choose>									switch문
+		<c:when test="${조건식}"></c:when>							case문
+		<c:otherwise></c:otherwise>								default문
+		<c:forEach></c:forEach>								for문
+
+	처음 시작했을때 단을 입력할 수 있는 인풋창, 제출 버튼
+		-> 숫자를 입력했다면
+
+		그 단으로 바디에다 구구단 출력
+		0 이하 혹은 100 초과면 바디에다 메세지 출력
+	
+		-> 숫자가 아닌것을 입력했다면
+		알럿창으로 숫자를 입력하세요 띄워주기
+
+
+
