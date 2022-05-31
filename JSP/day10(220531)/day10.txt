@@ -1,0 +1,11 @@
+Front-Controller 패턴
+		기능이 많아지면 servlet 개수가 많아지고 길어지는 문제가 발생하기 때문에
+		모든 요청을 한 곳에 받아오고 하나의 컨트롤러로 다시 처리로 보내주는 패턴을 이용
+
+			    *.do
+		a.jsp	--> web.xml	--> Servlet(FrontController)
+						  ↓
+						if, switch(.do로 들어오는 것이 많기 때문에 나눠서 
+								원하는 클래스 호출)
+						  ↓
+					Controller(~~~Action)
