@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Board">
+	<select id="getBoardCnt" resultType="_int">
+		select count(*) from test_board
+	</select>
+	
+	<!-- 별칭으로 클래스나 이런것을 설계도에 설정 가능 -->
+	<select id="getBoardList" parameterType="hashmap" resultType="boarddto">
+		select * from test_board order by boardnum desc limit #{startRow},#{pageSize}
+	</select>
+	
+	<insert id="insertBoard" parameterType="boarddto">
+		insert into test_board (boardtitle, boardcontents, userid)
+		values(#{boardtitle}, #{boardcontents}, #{userid})
+	</insert>
+	
+	<select id="getLastNum" parameterType="string" resultType="_int">
+		select max(boardnum) from test_board where userid=#{userid}
+	</select>
+	
+	<select id="getDetail" parameterType="_int" resultType="boarddto">
+		select * from test_board where boardnum=#{boardnum}
+	</select>
+	
+	<update id="updateReadCount" parameterType="_int">
+		update test_board set readcount = readcount+1 where boardnum=#{boardnum}
+	</update>
+	
+	<update id="updateBoard" parameterType="boarddto">
+		update test_board set boardtitle=#{boardtitle}, boardcontents=#{boardcontents}
+		where boardnum=#{boardnum}
+	</update>
+</mapper>
