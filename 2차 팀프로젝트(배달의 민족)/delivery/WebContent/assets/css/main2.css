@@ -1,0 +1,244 @@
+@charset "UTF-8";
+#header {
+	background: #2AC1BC;
+}
+#header.alt {
+	background: #2AC1BC;
+	height: 4rem;
+	line-height: 4rem;
+}
+#header img {
+	height: 3rem;
+	margin-top: 10px;
+}
+
+.wrapper.style1 {
+	background: #2AC1BC;
+}
+
+input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary, button.primary, .button.primary {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px #2ac1bc;
+    color: #2AC1BC !important;
+	height: 3rem;
+	font-size: 20px;
+}
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px #2ac1bc;
+    color: #2AC1BC !important;
+	height: 3rem;
+	font-size: 20px;
+}
+.features-grid {
+    max-width: 70rem;
+}
+.features-grid .feature {
+    width: 14rem;
+    height: 13rem;
+    border-left-width: 0px;
+    border-top-width: 0px;
+}
+.wrapper.style1 input[type="submit"].primary, .wrapper.style1 input[type="reset"].primary, .wrapper.style1 input[type="button"].primary, .wrapper.style1 button.primary, .wrapper.style1 .button.primary {
+    width: 23rem;
+    height: 3rem;
+    font-size: 25px;
+}
+
+#joinForm, #loginForm, #findIdForm, #findPwForm, #findIdResult, #findResetPwForm, #removeForm, #modifyForm{
+	width: 800px;
+    margin: 25px auto -40px;
+    font-family: 'BMHANNAAir';
+}
+#joinForm div, #loginForm div, #findIdForm div, #findPwForm div, #findIdResult div, #findResetPwForm div, #removeForm div, #modifyForm div{
+	display: block;
+	margin-top: -20px;
+}
+#longinput {
+	width:100%;
+}
+#shortinput {
+	width:385px;
+}
+#userpw_re {
+	margin-top : 15px;
+}
+#userphone {
+	width: 653px;
+}
+#sample6_postcode {
+	width: 616px;
+}
+#sample6_address {
+	width: 799.99px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+	border-color: #2AC1BC;
+	box-shadow: 0 0 0 1px #2AC1BC;
+}
+.logina {
+	text-decoration: none;
+	color: black;
+}
+.col-12 ul {
+	max-width: fit-content; margin: 0 auto;
+}
+.col-12 ul li {
+	padding : 0px;
+}
+.col-12 ul li input {
+	font-family:'BMHANNAPro'; margin-top: 19px; margin-left: -10px;
+}
+.features-grid.special {
+    margin-top: calc(-4rem - 1px);
+}
+.table-wrapper1 {
+	width: 660px;
+    margin: 25px auto -40px;
+    font-family: 'BMHANNAAir';
+}
+.mypage1 {
+	height:8rem;
+	background-color: white !important;
+}
+.mypage2 {
+	width:200px;
+	text-align: center;
+}
+.mypage3 {
+	height:10rem;
+	background-color: white !important;
+}
+.mypa1 {
+	line-height:6rem;
+	font-size: 1.5rem;
+}
+caption {
+	font-size: 2.5em;
+    margin-bottom: 40px;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+.clickmenu1 {
+	cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    width: 466.66px;
+    padding: 0;
+    font-size: 30px;
+}
+.clickinfo {
+	cursor: pointer;
+    text-align: center;
+    width: 466.66px;
+    padding: 0;
+    font-size: 30px;
+}
+.clickreview {
+	cursor: pointer;
+    text-align: center;
+    width: 466.66px;
+    padding: 0;
+    font-size: 30px;
+}
+
+.new {
+	font-weight: bolder;
+	float:left;
+	font-size: 30px;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+.new:active {
+	color :  #2AC1BC;
+}
+.new:hover:active {
+	background-color: white;
+}
+.starhigh {
+	font-weight: lighter;
+	float:left;
+	margin-left: 20px;
+	font-size: 30px;
+	text-decoration: none;
+	color: #9D9D9D;
+	cursor: pointer;
+}
+.starhigh:active {
+	color :  #2AC1BC;
+}
+.starhigh:hover:active {
+	background-color: white;
+}
+.starlow {
+	font-weight: lighter;
+	float:left;
+	margin-left: 20px;
+	font-size: 30px;
+	text-decoration: none;
+	color: #9D9D9D;
+	cursor: pointer;
+}
+.starlow:active {
+	color :  #2AC1BC;
+}
+.starlow:hover:active {
+	background-color: white;
+}
+
+.callheart:active {
+	color :  #2AC1BC !important;
+}
+.callheart:hover:active {
+	background-color: white !important;
+}
+
+/* 신민석씨 */
+.themeImg {
+	width: 100%;
+	height: 100%;
+}
+.themeAtag {
+	width: 100%;
+	height: 100%;
+	color: black;
+}
+.spotlights .spotlight .image {
+    align-self: stretch;
+    min-width: 24%;
+    margin: 0;
+    width: 200px;
+    height: 200px;
+}
+.spotlights .spotlight .image img {
+    object-fit: cover;
+    min-height: 100%;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 35px;
+;
+}
+.spotlights .spotlight {
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+.spotlights .spotlight .content {
+    min-width: 70%;
+    padding: 5rem;
+    height: 317px;
+}
+
+.hishead {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: -10px;
+}
