@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+  <typeAliases>
+  	<typeAlias type="com.delivery.app.user.dao.UserDTO" alias="userdto"/>
+  	<typeAlias type="com.delivery.app.store.dao.StoreDTO" alias="storedto"/>
+  	<typeAlias type="com.delivery.app.store.dao.OrderDTO" alias="orderdto"/>
+  	<typeAlias type="com.delivery.app.store.dao.ReviewDTO" alias="reviewdto"/>
+  	<typeAlias type="com.delivery.app.store.dao.StoreFileDTO" alias="storefiledto"/>
+  	<typeAlias type="com.delivery.app.store.dao.FoodDTO" alias="fooddto"/>
+  	<typeAlias type="com.delivery.app.store.dao.FoodFileDTO" alias="foodfiledto"/>
+  	<typeAlias type="com.delivery.app.store.dao.FoodOptionDTO" alias="foodoptiondto"/>
+  	<typeAlias type="com.delivery.app.store.dao.LikeStoreDTO" alias="likestoredto"/>
+  </typeAliases>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/delivery"/>
+        <property name="username" value="root"/>
+        <property name="password" value="1234"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+  	<mapper resource="com/delivery/mapper/user.xml"/>
+  	<mapper resource="com/delivery/mapper/store.xml"/>
+  	<mapper resource="com/delivery/mapper/review.xml"/>
+  	<mapper resource="com/delivery/mapper/food.xml"/>
+  	<mapper resource="com/delivery/mapper/order.xml"/>
+  	<mapper resource="com/delivery/mapper/likestore.xml"/>
+  	<mapper resource="com/delivery/mapper/file.xml"/>
+  	<mapper resource="com/delivery/mapper/foodoption.xml"/>
+  </mappers>
+</configuration>

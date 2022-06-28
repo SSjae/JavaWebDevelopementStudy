@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="File">
+	<select id="storeFile" parameterType="_int" resultType="storefiledto">
+		select * from storefile where storenum = #{storenum}
+	</select>
+	
+	<select id="foodFile" parameterType="_int" resultType="foodfiledto">
+		select * from foodfile where foodnum = #{foodnum}
+	</select>
+</mapper>

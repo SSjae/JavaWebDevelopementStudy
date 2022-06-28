@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Review">
+	<select id="storeReviewCnt" parameterType="_int" resultType="_int">
+		select count(*) from review where storenum = #{storenum}
+	</select>
+	
+	<select id="storeReviewNew" parameterType="_int" resultType="reviewdto">
+		select * from review where storenum=#{storenum} order by regdate desc
+	</select>
+	<select id="storeReviewHigh" parameterType="_int" resultType="reviewdto">
+		select * from review where storenum=#{storenum} order by starcnt desc
+	</select>
+	<select id="storeReviewLow" parameterType="_int" resultType="reviewdto">
+		select * from review where storenum=#{storenum} order by starcnt
+	</select>
+	
+	<select id="myReviewList" parameterType="string" resultType="reviewdto">
+		select * from review where userid=#{userid} order by regdate desc
+	</select>
+	
+	<select id="getOldStar" parameterType="_int" resultType="_int">
+		select starcnt from review where reviewnum = #{reviewnum}
+	</select>
+	
+	<update id="changeContents" parameterType="hashmap">
+		update review set reviewcontents = #{reviewcontents}, starcnt=#{starcnt} where reviewnum = #{reviewnum}
+	</update>
+		
+	<delete id="delReview" parameterType="_int">
+		delete from review where reviewnum = #{reviewnum}
+	</delete>
+	
+	<insert id="setReview" parameterType="reviewdto">
+		insert into review(reviewcontents,starcnt,userid,storenum) values(#{reviewcontents},#{starcnt},#{userid},#{storenum})
+	</insert>
+	
+	<select id="checkReview" parameterType="hashmap" resultType="_int">
+		select count(*) from review where userid=#{userid} and storenum=#{storenum}
+	</select>
+	
+	<select id="getReviewStore" parameterType="string" resultType="reviewdto">
+		select * from review where userid=#{userid}
+	</select>
+	
+	<select id="getStoreNum" parameterType="_int" resultType="_int">
+		select storenum from review where reviewnum=#{reviewnum}
+	</select>
+</mapper>
