@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Order">
+	<select id="storeOrderCnt" parameterType="_int" resultType="_int">
+		select count(*) from baeminorder where storenum=#{storenum}
+	</select>
+	
+	<select id="orders" parameterType="string" resultType="orderdto">
+		select * from baeminorder where userid=#{userid}
+	</select>
+	
+	<delete id="removeOrder" parameterType="_int">
+		delete from baeminorder where ordernum = #{ordernum}
+	</delete>
+	
+	<insert id="addOrder" parameterType="orderdto">
+		insert into baeminorder(ownercall, ridercall, totalprice, userid, storenum, foodnum, optionnum, foodhow, foodamount, foodtotalprice) 
+		values(#{ownercall}, #{ridercall}, #{totalprice}, #{userid}, #{storenum}, #{foodnum}, #{optionnum}, #{foodhow}, #{foodamount}, #{foodtotalprice})
+	</insert>
+</mapper>

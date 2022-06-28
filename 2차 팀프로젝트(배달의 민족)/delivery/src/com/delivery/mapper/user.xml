@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+	<select id="checkId" parameterType="string" resultType="_int">
+		select count(*) from user where userid = #{userid}
+	</select>
+	
+	<insert id="join" parameterType="userdto">
+		insert into user(userid, userpw, username, usernickname, useremail, userphone, zipcode, addr, addrdetail, addretc)
+		values(#{userid},#{userpw},#{username},#{usernickname},#{useremail},#{userphone},#{zipcode},#{addr},#{addrdetail},#{addretc})
+	</insert>
+	
+	<select id="login" parameterType="hashmap" resultType="userdto">
+		select * from user where userid=#{userid} and userpw=#{userpw}
+	</select>
+	
+	<select id="findId" parameterType="hashmap" resultType="userdto">
+		select * from user where username=#{username} and userphone=#{userphone}
+	</select>
+	
+	<select id="findPw" parameterType="userdto" resultType="userdto">
+		select * from user where userid=#{userid} and username=#{username} and userphone=#{userphone}
+	</select>
+	
+	<update id="findResetPw" parameterType="hashmap">
+		update user set userpw=#{userpw} where userid=#{userid}
+	</update>
+	
+	<delete id="userRemove" parameterType="string">
+		delete from user where userid=#{userid}
+	</delete>
+	
+	<select id="reviewUser" parameterType="string" resultType="userdto">
+		select * from user where userid=#{userid}
+	</select>
+	
+	<delete id="userRemoveOrder" parameterType="string">
+		delete from baeminorder where userid=#{userid}
+	</delete>
+	
+	<delete id="userRemoveLikestore" parameterType="string">
+		delete from likestore where userid=#{userid}
+	</delete>
+	
+	<delete id="userRemoveReview" parameterType="string">
+		delete from review where userid=#{userid}
+	</delete>
+	
+	<update id="modifyUsername" parameterType="hashmap">
+		update user set username=#{username} where userid=#{userid}
+	</update>
+	
+	<update id="modifyUsernickname" parameterType="hashmap">
+		update user set usernickname=#{usernickname} where userid=#{userid}
+	</update>
+	
+	<update id="modifyUserpw" parameterType="hashmap">
+		update user set userpw=#{userpw} where userid=#{userid}
+	</update>
+	
+	<update id="modifyUseremail" parameterType="hashmap">
+		update user set useremail=#{useremail} where userid=#{userid}
+	</update>
+	
+	<update id="modifyUserphone" parameterType="hashmap">
+		update user set userphone=#{userphone} where userid=#{userid}
+	</update>
+	
+	<update id="modifyZipcode" parameterType="hashmap">
+		update user set zipcode=#{zipcode} where userid=#{userid}
+	</update>
+	
+	<update id="modifyAddr" parameterType="hashmap">
+		update user set addr=#{addr} where userid=#{userid}
+	</update>
+	
+	<update id="modifyAddrdetail" parameterType="hashmap">
+		update user set addrdetail=#{addrdetail} where userid=#{userid}
+	</update>
+	
+	<update id="modifyAddretc" parameterType="hashmap">
+		update user set addretc=#{addretc} where userid=#{userid}
+	</update>
+	
+	<select id="getOrderCnt" parameterType="string" resultType="_int">
+		select ordercnt from user where userid=#{userid}
+	</select>
+	
+	<update id="setGrade" parameterType="hashmap">
+		update user set grade = #{i} where userid=#{userid}
+	</update>
+	
+	<update id="addOrderCnt" parameterType="string">
+		update user set ordercnt = ordercnt + 1 where userid = #{userid}
+	</update>
+</mapper>

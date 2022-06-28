@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Food">
+	<select id="storeFoodName" parameterType="_int" resultType="string">
+		select foodname from food where storenum=#{storenum}
+	</select>
+	
+	<select id="storeFood" parameterType="_int" resultType="fooddto">
+		select * from food where storenum=#{storenum} order by ordercnt desc
+	</select>
+	
+	<select id="foodTheme" parameterType="_int" resultType="string">
+		select distinct foodtheme from food where storenum=#{storenum};
+	</select>
+	
+	<select id="getFood" parameterType="_int" resultType="fooddto">
+		select * from food where foodnum=#{foodnum}
+	</select>
+	
+	<update id="addOrderCnt" parameterType="_int">
+		update food set ordercnt = ordercnt + 1 where foodnum=#{f}
+	</update>
+</mapper>

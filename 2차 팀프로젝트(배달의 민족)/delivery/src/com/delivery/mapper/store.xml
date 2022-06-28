@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Store">
+	<select id="storeTheme" parameterType="string" resultType="storedto">
+		select * from store where theme = #{theme}
+	</select>
+	
+	<select id="getStore" parameterType="_int" resultType="storedto">
+		select * from store where storenum=#{storenum}
+	</select>
+	
+	<update id="downLikeCnt" parameterType="_int">
+		update store set likecnt = likecnt - 1 where storenum=#{storenum}
+	</update>
+	<update id="upLikeCnt" parameterType="_int">
+		update store set likecnt = likecnt + 1 where storenum=#{storenum}
+	</update>
+	<update id="setStoreCnt" parameterType="hashmap">
+		update store set starcnt = #{newStar} where storenum = #{storenum}
+	</update>
+	
+	<select id="searchMarket" parameterType="string" resultType="storedto">
+		select * from store where storename like('%${keyword}%')
+	</select>
+</mapper>

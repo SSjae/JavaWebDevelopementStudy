@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="LikeStore">
+	<select id="isLike" parameterType="hashmap" resultType="_int">
+		select count(*) from likestore where userid=#{userid} and storenum=#{storenum}
+	</select>
+	
+	<delete id="removeLike" parameterType="hashmap">
+		delete from likestore where userid=#{userid} and storenum=#{storenum}
+	</delete>
+	<insert id="addLike" parameterType="hashmap">
+		insert into likestore (userid, storenum) values(#{userid}, #{storenum})
+	</insert>
+	
+	<select id="likeStore" parameterType="string" resultType="likestoredto">
+		select * from likestore where userid=#{userid}
+	</select>
+	
+	<select id="likeCnt" parameterType="string" resultType="_int">
+		select count(*) from likestore where userid=#{userid}
+	</select>
+	
+	<select id="getLikeStore" parameterType="string" resultType="likestoredto">
+		select * from likestore where userid=#{userid}
+	</select>
+</mapper>
