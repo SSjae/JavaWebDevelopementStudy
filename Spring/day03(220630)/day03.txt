@@ -1,0 +1,95 @@
+프로젝트 기본 구성 요소
+		src/main/java		작성되는 코드의 경로
+		src/main/resource	실행할 때 참고하는 기본 경로(설정 파일)
+		src/test/java		테스트 코드를 넣는 경로
+		src/test/resource	테스트 관련 설정 파일 보관 경로
+
+웹과 관련된 스프링 설정 파일
+		src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+		url에 맞게 요청을 하면 web.xml을 들려서 하나하나 씩 실행하는데
+		그 때 param으로 servlet-context.xml을 들려서 스캔을 한 다음에
+		설정된 Servlet으로 가게 된다.
+		servlet-context.xml에서 prefix / suffix 가 있어서
+		controller에서 따로 JSP때 처럼 acto로 path를 설정해줄 필요없이
+		그냥 문자열만 반환해주면 그곳으로 가게 된다.
+
+bean 관리용 스프링 설정 파일
+		src/main/webapp/WEB-INF/spring/root-context.xml
+
+Tomcat의 web.xml파일
+		WEB-INF/web.xml
+
+템플릿 프로젝트의 jsp 파일 경로
+		src/main/webapp/WEB-INF/views
+		스프링에서는 ???-INF안에 view가 있기 때문에 보안이 걸려있다.
+		그래서 바로 view를 실행시키면 안되고 무조건적으로 controller를 들르게 해줘야 함
+
+Maven이 사용하는 pom.xml
+		ex00/pom.xml
+
+-----------------------------------------------------------------------------------------
+의존성 주입 테스트
+		호텔, 레스토랑 안에 셰프 객체를 주입하는 예제
+		생성자, setter 메소드를 이용한 주입으로 의존성 주입 구현
+		설정 방식은 XML이나 어노테이션을 이용해서 처리
+
+		주입을 하기 위해서는 bean을 사용 --> root-context.xml
+		<?xml version="1.0" encoding="UTF-8"?>
+		<beans xmlns="http://www.springframework.org/schema/beans"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:context="http://www.springframework.org/schema/context"
+			xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+			xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+				http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		설정
+
+		<!-- 작성된 패키지 안에 있는 @Component가 적힌 class를 스캔해서 주입 -->
+		<context:component-scan base-package="com.koreait.sample"/>
+
+		그래서 스프링에서 관리해야할 class에다가 @Component를 해줘야 됨
+
+스프링 프레임워크 동작시 생기는 일
+		스프링 프레임워크가 시작되면서 먼저 스프링이 사용하는 메모리 영역을 만든다.
+		스프링 내부적으로 ApplicationContext라는 이름의 객체가 만들어진다.
+		스프링은 자신이 생성하고 관리해야 하는 객체들에 대한 설정을 알아야 하고
+		이 설정파일은 root-context.xml 이라는 파일로 만들어져 있다.
+		root-context.xml에 설정되어 있는 <context:component-scan>
+		태그의 내용을 통해서 com.koreait.sample 패키지를 스캔하기 시작한다.
+		해당 패키지에 있는 클래스들 중에서 스프링이 사용하는 @Component라는
+		어노테이션이 존재하는 클래스의 인스턴스를 생성한다. Restaurant 객체는
+		Chef 객체가 필요하다는 어노테이션(@Autowired) 설정이 있으므로
+		Chef 객체의 레퍼런스를 Restaurant 객체에 주입한다.
+
+테스트 환경(JUnit)
+		자바 프로그래밍 언어용 유닛 테스트 프레임워크
+		가장 많이 사용하는 테스트 환경
+		테스트 성공시 JUnit GUI 창에 녹색으로 표시 / 실패시 적색으로 표시
+		하나하나의 케이스별로(단위로 나누어서) 테스트를 하는 단위 테스트 도구
+		(전체를 하는 것보다 메소드 하나하나를 테스트 하는 도구)
+
+테스트 환경 구축하기
+		1. 테스트 클래스 위쪽에 어노테이션 추가
+				@RunWith(SpringJUnit4ClassRunner.class)
+		2. 내부에 테스트용 메소드 선언
+				내용은 우리가 테스트 해볼 로직으로 구현
+		3. 테스트용 메소드 위에 어노테이션 추가	
+				@Test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
