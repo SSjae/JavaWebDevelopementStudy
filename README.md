@@ -50,5 +50,28 @@
 * day19(220517) : jQuery, 템플릿을 이용한 view<br>
 
 # DBMS
+* day01(220408) : DB기초, DB 생성, 자료형, table생성<br>
+* day02(220411) : 테이블 삭제, 수정, PK, FK, 모델링<br>
+* day03(220412) : DML, where 조건절, ALIAS, IN..<br>
+* day04(220413) : like, 단일행, 그룹, group by, having, order by<br>
+* day05(220414) : Join, 서브쿼리, JDBC 연결 기초<br>
+* day06(220415) : ums 예제 JDBC로 변환, 팀플 조<br>
+* ums_db : ums예제(MVC) JDBC로 변환<br>
+
 # JSP
+day01(220518) : Servlet, JSP, 스크립트태그(<%! %>, <% %>, <%= %>)<br>
+day02(220519) : 디렉티브 태그, include, 액션태그(forward, param), 자바빈즈<br>
+day03(220520) : 내장 객체, 폼 유효성 검사, 쿠키(Cookie)<br>
+day04(220523) : 쿠키, 세션, Ajax, XMLHttpRequest, GET, POST<br>
+day05(220524) : DBCP(Database Connection Pool), JNDI, 우편번호<br>
+day06(220525) : 회원가입, 로그인, 로그아웃, 유효성 검사(정규식), Ajax 이용한 중복체크<br>
+day07(220526) : MyBatis, MyBatis 작동원리, DB연결 MyBatis로 바꾸기<br>
+day08(220527) : EL문, JSTL문, core 태그<br>
+day09(220530) : MVC model2, Front-Controller 패턴<br>
+day10(220531) : MVC model2, FrontController join, login<br>
+day11(220607) : MVC Model2, join, login, logout, boardList<br>
+day12(220608) : MVC Model2, boardwriter, 파일 업로드(이미지 디비 저장)<br>
+day13(220609) : MVC Model2, 게시글 보기 및 수정, 파일 업로드 수정<br>
+day14(220610) : MVC Model2, 게시글 삭제 및 댓글 추가,삭제,수정<br>
+
 # Spring
