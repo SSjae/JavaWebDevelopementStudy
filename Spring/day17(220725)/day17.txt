@@ -1,0 +1,22 @@
+REST(Representational State Transfer)
+		"하나의 URI는 하나의 고유한 리소스를 대표하도록 설계된다."
+
+		일반 :	 /board/get?boardnum=10
+		REST 방식 : /board/get/10
+
+		일반 : /board/remove?boardnum=10
+		REST 방식 : /board/remove/10
+
+JSON(JavaScript Object Notation)
+		자바스크립트에 있는 객체의 형태대로 서로 다른 언어들끼리
+		데이터를 주고받을 수 있도록 해주는 공용어
+		Key-Value 구조로 이루어진 텍스트를 이용하는 개방형 표준 포맷
+
+		"{key:value}"
+
+		List<BoardDTO> list
+
+		"[
+			{boardnum:1,boardtitle:제목,boardcontents:내용},
+			...
+		]"
