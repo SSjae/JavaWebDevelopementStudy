@@ -8,7 +8,7 @@
   + Spring<br>
 * 기간 : 2022.03.15 ~ 2022.08.08<br>
 
-# JAVA
+## JAVA
 * day02(220316) : 출력, 제어문자, 서식문자, 변수, 자료형<br>
 * day03(220317) : Scanner, 형변환, 연산자<br>
 * day04(220318) : 연산자, 제어문, 조건문<br>
@@ -28,7 +28,7 @@
 * melon-자바 기반 팀프로젝트(연습) : 자바 기반 팀프로젝트(연습) - 멜론 음악 프로그램<br>
 * ums_java : 자바 종합 예제(MVC)<br>
 
-# HTML, CSS, JavaScript
+## HTML, CSS, JavaScript
 * day01(220418) : 웹, 서버, 클라, 프로토콜, WAS, 도메인<br>
 * day02(220419) : 인코딩, www, 웹 표준, html, css<br>
 * day03(220420) : XHTML, XML, HTML 기초, 요소, head<br>
@@ -49,7 +49,7 @@
 * day18(220516) : form태그접근, location, history, DOM<br>
 * day19(220517) : jQuery, 템플릿을 이용한 view<br>
 
-# DBMS
+## DBMS
 * day01(220408) : DB기초, DB 생성, 자료형, table생성<br>
 * day02(220411) : 테이블 삭제, 수정, PK, FK, 모델링<br>
 * day03(220412) : DML, where 조건절, ALIAS, IN..<br>
@@ -58,7 +58,7 @@
 * day06(220415) : ums 예제 JDBC로 변환, 팀플 조<br>
 * ums_db : ums예제(MVC) JDBC로 변환<br>
 
-# JSP
+## JSP
 * day01(220518) : Servlet, JSP, 스크립트태그(<%! %>, <% %>, <%= %>)<br>
 * day02(220519) : 디렉티브 태그, include, 액션태그(forward, param), 자바빈즈<br>
 * day03(220520) : 내장 객체, 폼 유효성 검사, 쿠키(Cookie)<br>
@@ -74,4 +74,4 @@
 * day13(220609) : MVC Model2, 게시글 보기 및 수정, 파일 업로드 수정<br>
 * day14(220610) : MVC Model2, 게시글 삭제 및 댓글 추가,삭제,수정<br>
 
-# Spring
+## Spring
