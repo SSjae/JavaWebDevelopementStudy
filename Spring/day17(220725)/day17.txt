@@ -20,3 +20,4 @@ JSON(JavaScript Object Notation)
 			{boardnum:1,boardtitle:제목,boardcontents:내용},
 			...
 		]"
+		
