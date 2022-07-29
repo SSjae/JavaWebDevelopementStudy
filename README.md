@@ -1,11 +1,11 @@
 # JavaWebDevelopementStudy
 * 자바 웹개발 공부 및 실습<br>
 * 웹 개발 종류<br>
-  + ![Java](https://img.shields.io/badge/Java-007396.svg?style=flat-square&logo=java&logoColor=white)<br>
-  + ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)<br>
-  + ![DBMS](https://img.shields.io/badge/DBMS-4479A1?style=flat-square&logo=mysql&logoColor=white)<br>
-  + ![JSP](https://img.shields.io/badge/JSP-E56F1F?style=flat-square&logo=&logoColor=white)<br>
-  + ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white)<br>
+  ![Java](https://img.shields.io/badge/Java-007396.svg?style=flat-square&logo=java&logoColor=white)<br>
+  ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)<br>
+  ![DBMS](https://img.shields.io/badge/DBMS-4479A1?style=flat-square&logo=mysql&logoColor=white)<br>
+  ![JSP](https://img.shields.io/badge/JSP-E56F1F?style=flat-square&logo=&logoColor=white)<br>
+  ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white)<br>
 * 기간 : 2022.03.15 ~ 2022.08.08<br>
 
 ## JAVA
