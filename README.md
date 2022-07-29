@@ -1,11 +1,11 @@
 # JavaWebDevelopementStudy
 * 자바 웹개발 공부 및 실습<br>
 * 웹 개발 종류<br>
-  + JAVA<br>
-  + HTML, CSS, JavaScript<br>
-  + DBMS<br>
-  + JSP<br>
-  + Spring<br>
+  + ![Java](https://img.shields.io/badge/Java-007396.svg?style=flat-square&logo=java&logoColor=white)<br>
+  + ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)<br>
+  + ![DBMS](https://img.shields.io/badge/DBMS-4479A1?style=flat-square&logo=mysql&logoColor=white)<br>
+  + ![JSP](https://img.shields.io/badge/JSP-E56F1F?style=flat-square&logo=&logoColor=white)<br>
+  + ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white)<br>
 * 기간 : 2022.03.15 ~ 2022.08.08<br>
 
 ## JAVA
@@ -72,7 +72,7 @@
 * day11(220607) : MVC Model2, join, login, logout, boardList<br>
 * day12(220608) : MVC Model2, boardwriter, 파일 업로드(이미지 디비 저장)<br>
 * day13(220609) : MVC Model2, 게시글 보기 및 수정, 파일 업로드 수정<br>
-* day14(220610) : MVC Model2, 게시글 삭제 및 댓글 추가,삭제,수정<br>
+* day14(220610) : MVC Model2, 게시글 삭제 및 댓글 추가, 삭제, 수정<br>
 
 ## Spring
 * day01(220628) : 스프링 프레임워크 장점, 특징, POJO, 의존성주입, AOP, 트랜잭션
@@ -90,5 +90,5 @@
 * day15(220721) : Spring 최종예제 7, 게시판 수정 및 삭제
 * day17(220725) : Spring 최종예제 8, 댓글, REST, Ajax, JSON
 * day18(220726) : Spring 최종예제 9, 댓글, Ajax, JSON, REST 매핑
-* day19(220727) : Spring 최종예제 10, 댓글 등록, 삭제, Ajax, REST 요청방식
-* day20(220728) : Spring 최종예제 11(완료), 댓글 수정, Ajax, REST 요청방식
+* day19(220727) : Spring 최종예제 10, 댓글 등록/삭제, Ajax, REST 요청방식
+* day20(220728) : Spring 최종예제 11(완), 댓글 수정, Ajax, REST 요청방식
