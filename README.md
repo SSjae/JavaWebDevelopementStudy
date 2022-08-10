@@ -1,10 +1,10 @@
 # JavaWebDevelopementStudy
 * 자바 웹개발 공부 및 실습<br>
 * 웹 개발 종류<br>
-  Java
-  HTML & CSS & JavaScript
-  DBMS
-  JSP
+  Java<br>
+  HTML & CSS & JavaScript<br>
+  DBMS<br>
+  JSP<br>
   Spring
 * 기간 : 2022.03.15 ~ 2022.08.08<br>
 
